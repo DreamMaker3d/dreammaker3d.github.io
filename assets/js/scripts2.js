@@ -71,9 +71,8 @@ woo: {
 
     let meshRows = [
         ['eg', 'tut'],
-['costum', 'hybri'],
-['field', 'mous'],
-['woo'],
+        ['costum', 'woo'],
+        ['field'],
     ];
     let container = document.getElementById("meshContainer2");
     meshRows.forEach((meshIds) => {
