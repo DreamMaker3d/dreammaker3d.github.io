@@ -96,11 +96,131 @@
             </div>
         </div>
     </div>
+
+    </div>
+    <hr class="divider" />
     <div class="container" style="max-width: 768px;">
-        <div style="text-align: center;">
-           <img src="assets/images/icon.png" >
+        <div class="row">
+            <div class="col-md-12">
+                <h2>More ablation studies</h2>
+                                <p>
+                we provide additional ablation studies that
+                could not be included in the main body of the paper. These
+                studies examine various aspects of our model, including: 1)
+                the impact of using different initial images and random seeds
+                for initialization, 2) the analysis of the effects with and with-
+                out Alpha Entropy Regulation, and Smoothness, 3) the effects of utilizing Zero-1-to-3 during the refinement stage.
+                                </p>
+                <h2>Random Initialization</h2>
+                <p>
+                    We assess the impact of using different seeds and initialization images. Our findings indicate that our
+                    method is not notably affected by the choice of random initialization. In contrast, DreamFusion and
+                    Magic3D heavily relies on the selection of random seeds in achieving high-quality results and avoiding
+                    the multi-face Janus problem.<!-- </strong> -->
+                </p>
+            </div>
         </div>
     </div>
+    <div class="container" style="max-width: 768px;">
+        <div style="text-align: center;">
+            <img src="assets/images/init.png" style="width: 100%;">
+        </div>
+    </div>
+    
+    
+    </div>
+    <!-- <hr class="divider" /> -->
+    <div class="container" style="max-width: 768px;">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Smooth Regulation</h2>
+                <p>
+                    We conduct an evaluation of the impact of the smoothness loss on our coarse-stage results. Our findings
+                    suggest that applying smoothness regulation can enhance the quality of textures. Simultaneously, it has
+                    a modest beneficial effect on the quality of the mesh, as visualized via the surface normal
+                    maps.<!-- </strong> -->
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container" style="max-width: 768px;">
+        <div style="text-align: center;">
+            <img src="assets/images/smooth.png" style="width: 100%;">
+        </div>
+    </div>
+    
+    
+    </div>
+    <!-- <hr class="divider" /> -->
+    <div class="container" style="max-width: 768px;">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Entropy Loss</h2>
+                <p>
+                    We incorporate an additional entropy loss into our model, which aims to address floats and blurs in the
+                    background that could enhance the mesh extraction process. We present a comparison of the results
+                    obtained when training with and without the implementation of Entropy Loss. The use of entropy loss
+                    effectively eliminates the floaters and blurs in the background, leading to clearer and more detailed
+                    imagery.<!-- </strong> -->
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container" style="max-width: 768px;">
+        <div style="text-align: center;">
+            <img src="assets/images/entropy.png" style="width: 100%;">
+        </div>
+    </div>
+
+    
+    
+    </div>
+    <!-- <hr class="divider" /> -->
+    <div class="container" style="max-width: 768px;">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Zero-1-to-3 in the Refinement Stage</h2>
+                <p>
+                We evaluate the effects of utilizing Zero-1-to-3 for surface normal regulation during the refinement stage. Similar to
+                our approach in the coarse stage, we feed the surface normal rendering into Zero-1-to-3, while continuing to use
+                Stable-Diffusion for RGB SDS loss. Utilizing only
+                Stable-Diffusion to compute SDS losses for both surface normal and RGB texture renderings allows our model to generate
+                more detailed mesh surfaces. This outcome is attributable to Zero-1-to-3's limitation in only generating low-resolution
+                images and providing weak regulation at low resolutions, which renders it unsuitable for the refinement stage that
+                necessitates more detailed textures and mesh surfaces.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container" style="max-width: 768px;">
+        <div style="text-align: center;">
+            <img src="assets/images/zero123.png" style="width: 100%;">
+        </div>
+    </div>
+
+
+
+    </div>
+    <!-- <hr class="divider" /> -->
+    <div class="container" style="max-width: 768px;">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>PBR Material Modeling</h2>
+                <p>
+                In addition to our previous experiments, we also investigate the use of the Physically-Based Rendering (PBR) material
+                modeling method during our refinement stage. This method involves
+                decomposing the texture into three components of the material model: the diffuse term, the roughness and metallic term,
+                and the normal variation term. The PBR material modeling approach can be beneficial for simulation applications.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container" style="max-width: 768px;">
+        <div style="text-align: center;">
+            <img src="assets/images/pbr.png" style="width: 100%;">
+        </div>
+    </div>
+
 
 <!--    <div class="container" style="max-width: 768px;">-->
 <!--        <div class="row captioned_videos">-->
@@ -199,7 +319,7 @@
 <!--            </div>-->
 <!--        </div>-->
 <!--    </div>-->
-<!--    <hr class="divider" />-->
+   <hr class="divider" />
     <div class="container meshes" id="meshContainer" style="max-width: 768px;">
         <div class="row">
             <div class="col-md-12">
