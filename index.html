@@ -97,6 +97,126 @@
         </div>
     </div>
 
+
+
+    <div class="container" style="max-width: 768px;">
+        <div style="text-align: center;">
+            <img src="assets/images/architecture.png" style="width: 100%;">
+        </div>
+    </div>
+
+    </div>
+    <hr class="divider" />
+    <div class="container" style="max-width: 768px;">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Comparison with state-of-the-art models</h2>
+            </div>
+        </div>
+    </div>
+        <div class="container" style="max-width: 768px;">
+            <div class="row">
+                <div class="col-md-12">
+                    <p>
+                        Although Magic3D and
+                        ProlificDreamer are able to generate high-quality objects in
+                        some cases, multi-view inconsistency still occurs in many
+                        other cases. For example, in Magic3D, wheels of the vehicle
+                        in the first case have inconsistent directions and airplane in
+                        the second case has multi-heads. Our DreamMaker further
+                        introduces 3D consistency to avoid the Janus problem and
+                        can still produce high-resolution meshes and high-quality
+                        textures. We use the threestudio implementation for all the baselines.                     </p>
+                </div>
+            </div>
+        </div>
+
+<div class="container" style="max-width: 768px;">
+
+<div class="row">
+    <!-- <div class="column-3">
+        <p>Magic3D-IF-SD</p>
+    </div>
+    <div class="column-3">
+                <p>ProlificDreamer</p>
+    </div>
+    <div class="column-3">
+                <p>Ours</p>
+    </div>
+</div> -->
+
+
+        <!-- <div class="row" style="margin-bottom: 0px;">
+            <div class="col-xs-4 compare-title  compare-title-sm">
+                <p>Magic3D-IF-SD</p>
+            </div>
+            <div class="col-xs-4 compare-title">
+                <p>ProlificDreamer</p>
+            </div>
+            <div class="col-xs-4 compare-title">
+                <p>Ours</p>
+            </div>
+        </div> -->
+
+</div>
+<div class="container" style="max-width: 768px;">
+    
+        <div style="text-align: center;">
+            <p class="compare-caption" style="display: inline-block;">
+                Magic3D-IF-SD &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp ProlificDreamer &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Ours &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</p>
+        </div>
+
+
+    <div class="row captioned_videos">
+        <video class="video lazy" loop playsinline autoplay muted style="width: 100%">
+            <source
+                src="assets/video/Beautifully_designed_hyper-realistic_futuristic_electric_vehicle_for_elderly_people_highest_poly_count_highest_contrast_highest_detail_highest_quality_UHD.mp4"
+                type="video/mp4">
+            </source>
+        </video>
+    </div>
+    <div style="text-align: center;">
+        <p class="compare-caption" style="display: inline-block;">
+            Beautifully designed hyper-realistic futuristic electric vehicle for elderly people highest poly count highest contrast highest detail highest quality UHD
+        </p>
+    </div>
+    <div class="row captioned_videos">
+        <video class="video lazy" loop playsinline autoplay muted style="width: 100%">
+            <source
+                src="assets/video/Beautifully_designed_hyper-realistic_psychedelic_bee-concept_futuristic_fighter_jet_aircraft_highest_contrast_highest_poly_count_highest_detail_highest_quality_UHD.mp4"
+                type="video/mp4">
+            </source>
+        </video>
+    </div>
+    <div style="text-align: center;">
+        <p class="compare-caption" style="display: inline-block;">
+            Beautifully designed hyper-realistic psychedelic bee-concept futuristic fighter jet aircraft highest contrast highest poly count highest detail highest quality UHD
+        </p>
+    </div>
+    <div class="row captioned_videos">
+        <video class="video lazy" loop playsinline autoplay muted style="width: 100%">
+            <source src="assets/video/a_asian_Santa_Claus.mp4" type="video/mp4"> </source>
+        </video>
+    </div>
+        <div style="text-align: center;">
+            <p class="compare-caption" style="display: inline-block;">an Asian Santa Claus</p>
+        </div>
+    <div class="row captioned_videos">
+        <video class="video lazy" loop playsinline autoplay muted style="width: 100%">
+            <source src="assets/video/a_metal_bunny_sitting_on_top_of_a_stack_of_chocolate_cookie.mp4" type="video/mp4">
+            </source>
+        </video>
+    </div>
+    <div style="text-align: center;">
+        <p class="compare-caption" style="display: inline-block;">a metal bunny sitting on top of a stack of chocolate cookie</p>
+    </div>
+
+
+</div>
+
+
+
+
     </div>
     <hr class="divider" />
     <div class="container" style="max-width: 768px;">
@@ -104,7 +224,7 @@
             <div class="col-md-12">
                 <h2>More ablation studies</h2>
                                 <p>
-                we provide additional ablation studies that
+                We provide additional ablation studies that
                 could not be included in the main body of the paper. These
                 studies examine various aspects of our model, including: 1)
                 the impact of using different initial images and random seeds
@@ -222,7 +342,7 @@
     </div>
 
 
-<!--    <div class="container" style="max-width: 768px;">-->
+   <!-- <div class="container" style="max-width: 768px;">-->
 <!--        <div class="row captioned_videos">-->
 <!--            <div class="col-md-12">-->
 <!--                &lt;!&ndash; Large format devices &ndash;&gt;-->
@@ -236,7 +356,7 @@
 <!--                <h6 class="caption">Given a caption, DreamFusion generates relightable 3D objects with high-fidelity appearance, depth, and normals. Objects are represented as a Neural Radiance Field and leverage a pretrained text-to-image diffusion prior such as Imagen.</h6>-->
 <!--            </div>-->
 <!--        </div>-->
-<!--    </div>-->
+<!--    </div> -->
 <!--    <hr class="divider" />-->
 <!--    <div class="container" style="max-width: 768px;">-->
 <!--        <div class="row">-->
