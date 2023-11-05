@@ -224,23 +224,140 @@
             <div class="col-md-12">
                 <h2>More ablation studies</h2>
                                 <p>
-                We provide additional ablation studies that
-                could not be included in the main body of the paper. These
-                studies examine various aspects of our model, including: 1)
-                the impact of using different initial images and random seeds
-                for initialization, 2) the analysis of the effects with and with-
-                out Alpha Entropy Regulation, and Smoothness, 3) the effects of utilizing Zero-1-to-3 during the refinement stage.
+                we present a series of additional ablation studies that extend beyond the scope of the main manuscript. These
+                investigations delve into various facets of our model's performance and behavior, including: (1) the role of CLIP
+                regularization in texture and shape refinement; (2) the
+                benefits of the warm-up phase in the coarse stage;(3) the capabilities in generating human-centric 3D models;
+                (4)the impact of using different initial images and random seeds
+                for initialization; (5) the analysis of the effects with and with-
+                out Alpha Entropy Regulation, and Smoothness; (6) the effects of utilizing Zero-1-to-3 during the refinement stage.
                                 </p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <!-- <div class="container" style="max-width: 768px;">
+        <div class="row">
+            <div class="col-md-12">
+                <h2></h2>
+
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container" style="max-width: 768px;">
+        <div style="text-align: center;">
+            <img src="assets/images/clip.png" style="width: 100%;">
+        </div>
+    </div> -->
+
+    <div class="container" style="max-width: 768px;">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>CLIP Regulation</h2>
+                <p>
+
+            During the coarse stage of our model, an additional CLIP loss is integrated to refine the generative process,
+            significantly enhancing shapes and textures. The figure below exemplifies this improvement: the
+            surfaces of the miniature schnauzer and piglet display considerably sharper textures subsequent to the application of
+            the CLIP loss. Notably, the facial features of the piglet, such as the eyes and nose, achieve enhanced realism in the final
+            row. This can be attributed to the CLIP regulation's role in optimizing the generated scenes to align closely with the
+            textual prompts via CLIP similarity metrics.
+            
+            </p>
+            </div>
+        </div>
+    </div>
+    <div class="container" style="max-width: 768px;">
+        <div style="text-align: center;">
+            <img src="assets/images/clip.png" style="width: 100%;">
+        </div>
+    </div>
+
+    <div class="container" style="max-width: 768px;">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Zero-1-to-3 warmup in the coarse stage</h2>
+                <p>
+                In the beginning of the coarse stage,
+                we implement the Zero-1-to-3 warmup with the guidance of RGB. During this phase, in the absence of DeepFloyd IF, the 3D
+                object is able to achieve a stable, rough initialization, characterized by consistent geometric integrity. This
+                foundational procedure benefits to reinforcing both the texture fidelity and geometric stability in the final 3D model
+                outcomes. 
+                Notably, post-warmup, the geometric configurations of objects, such as ice-cream sundaes and saguaro cactus,
+                exhibit markedly improved realism. The implementation of the Zero-1-to-3 warmup lays the groundwork for a robust and
+                realistic geometric framework in the nascent stages of model training.<!-- </strong> -->
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container" style="max-width: 768px;">
+        <div style="text-align: center;">
+            <img src="assets/images/warmup.png" style="width: 100%;">
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+        <div class="container" style="max-width: 768px;">
+            <div class="row">
+                <div class="col-md-12">
+                <h2>Human-centric 3D Asset Generation</h2>
+                <p>
+                Our architecture demonstrates proficiency in the creation of human-related assets. By processing prompts that
+                are specifically crafted for human figures, our architecture can generate 3D representations of human faces and
+                bodies with high fidelity and consistency from multiple viewpoints. Remarkably, this is achieved without any
+                predefined knowledge of human anatomical structures. For instance, our model successfully generates a realistic bust of
+                an Asian Santa Claus. Additionally, our generated astronaut, Deadpool and Spiderman display a 3D geometric consistency that adheres closely to human anatomical form.<!-- </strong> -->
+                    </p>
+                </div>
+            </div>
+        </div>
+    <div class="container" style="max-width: 768px;">
+        <div style="text-align: center;">
+            <img src="assets/images/human.png" style="width: 100%;">
+        </div>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="container" style="max-width: 768px;">
+            <div class="row">
+                <div class="col-md-12">
                 <h2>Random Initialization</h2>
                 <p>
                     We assess the impact of using different seeds and initialization images. Our findings indicate that our
                     method is not notably affected by the choice of random initialization. In contrast, DreamFusion and
                     Magic3D heavily relies on the selection of random seeds in achieving high-quality results and avoiding
                     the multi-face Janus problem.<!-- </strong> -->
-                </p>
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
     <div class="container" style="max-width: 768px;">
         <div style="text-align: center;">
             <img src="assets/images/init.png" style="width: 100%;">
